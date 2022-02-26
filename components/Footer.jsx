@@ -30,12 +30,16 @@ function Footer({ language, setLanguage, handleLanguage }) {
           <BiDotsVerticalRounded />
         </li>
         {leftSide.map((language, index) => (
-          <li key={index}>{handleLanguage(language.en, language.hu)}</li>
+          <li className="hover:underline underline-offset-2" key={index}>
+            {handleLanguage(language.en, language.hu)}
+          </li>
         ))}
       </ul>
       <ul className="flex flex-col gap-0.5 md:flex-row md:items-center md:gap-4">
         {rightSide.map((language, index) => (
-          <li key={index}>{handleLanguage(language.en, language.hu)}</li>
+          <li className="hover:underline underline-offset-2" key={index}>
+            {handleLanguage(language.en, language.hu)}
+          </li>
         ))}
         <li className="flex justify-center md:ml-4">
           <HiQuestionMarkCircle className="w-[25px] h-[25px]" />
